@@ -42,4 +42,4 @@ Run `grunt` for distributing your application. All CoffeeScript files will be co
 
 ## Example
 
-This repository contains the [Bowling Game Kata](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata) as an example. Just look at the files and try the commands described in **Usage** :-)
+This repository contains the [Bowling Game Kata](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata) as an example. Just look at the files and try the commands described in [Usage](#usage) :-)
