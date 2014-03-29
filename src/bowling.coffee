@@ -1,8 +1,9 @@
 'use strict'
 
 class Game
-	_rolls: []
-	_currentRoll: 0
+	constructor: ->
+		@_rolls = []
+		@_currentRoll = 0
 
 	_isSpare: (frameIndex) -> @_rolls[frameIndex] + @_rolls[frameIndex + 1] is 10
 
