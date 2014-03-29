@@ -1,10 +1,16 @@
 # coffee-dev
 
-This is a small setup for developing a CoffeeScript application with TDD using [Grunt](http://gruntjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) with the [Jasmine](http://jasmine.github.io/) testing framework and the [Istanbul](https://github.com/yahoo/istanbul) code coverage reporter.
+This is a small setup for developing a CoffeeScript application with TDD using [Grunt](http://gruntjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) with the [Jasmine](http://jasmine.github.io/) testing framework.
 
 ## Requirements
 
-To use this setup you need to have `node` and `npm` installed. Optionally you can install `grunt-cli` and `karma-cli` globally by using the command
+To use this setup you need to have `node` and `npm` installed. For running the test server you need [PhantomJS](http://phantomjs.org/).
+
+```
+npm install -g phantomjs
+```
+
+Optionally you can install `grunt-cli` and `karma-cli` globally by using the command
 
 ```
 npm install -g grunt-cli karma-cli
@@ -34,7 +40,7 @@ The files are not uglified or concatenated so you can debug your code easily.
 
 ### Code coverage
 
-The code coverage reports are put in the `coverage/` directory. Simply open the `index.html` and explore the report. You can see a detailed per-file report there, too!
+This setup uses [Istanbul](https://github.com/yahoo/istanbul) as code coverage reporter. The reports are put in the `coverage/` directory. Simply open the `index.html` and explore the report. You can see a detailed per-file report there, too!
 
 ### Testing
 
