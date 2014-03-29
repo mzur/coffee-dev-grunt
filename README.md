@@ -24,15 +24,15 @@ Just get the contents of this repository and run `npm install` in the directory 
 
 In this setup you will find two directories, `src/` and `test-src/`. The `src/` directory is for the source code of your application. The `test-src/` directory is for the Jasmine unit tests.
 
+### Developement
+
 When you start developing your application, you have to start up the Karma server for running the tests first:
 
 ```
 karma start
 ```
 
-This will launch Firefox as test runner by default.
-
-### Developement
+This will launch PhantomJS as test runner by default but you can add several other browsers, too.
 
 Run `grunt watch` for developing your application. This will watch all files in `src/` and `test-src/` and compile them on any change to `dev/` or `test/` respectively. After that all tests are run.
 
@@ -42,13 +42,11 @@ The files are not uglified or concatenated so you can debug your code easily.
 
 This setup uses [Istanbul](https://github.com/yahoo/istanbul) as code coverage reporter. The reports are put in the `coverage/` directory. Simply open the `index.html` and explore the report. You can see a detailed per-file report there, too!
 
-### Testing
+### Building
 
-Run `grunt test` to compile and test your application just once.
+Run `grunt` for building your application. All CoffeeScript files will be compiled and all tests will be run. In contrast to `grunt watch` this will *only* run the tests with PhantomJS, which is useful for continuous integration.
 
-### Distribution
-
-Run `grunt` for distributing your application. All CoffeeScript files will be compiled and all tests will be run. If the tests pass, your application files are concatenated and put in a single JavaScript file in the `dist/` directory. Finally an uglified version of the application file is created.
+If the tests pass, your application files are concatenated and put in a single JavaScript file in the `dist/` directory. Finally an uglified version of the application file is created.
 
 ## Example
 

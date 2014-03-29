@@ -50,6 +50,10 @@ module.exports = (grunt) ->
 			unit:
 				configFile: 'karma.conf.js'
 				background: yes
+			continuous:
+				configFile: 'karma.conf.js'
+				singleRun: yes
+				browsers: ['PhantomJS']
 
 		coffee_jshint:
 			files: ['Gruntfile.coffee', '<%= path.src %>', '<%= path.test %>']
@@ -89,7 +93,7 @@ module.exports = (grunt) ->
 		#'coffee_jshint'
 		'coffee:dev'
 		'coffee:test'
-		'karma:unit:run'
+		'karma:continuous'
 	]
 
 	grunt.registerTask 'default', ['test', 'coffee:dist', 'uglify']
