@@ -1,6 +1,6 @@
 # coffee-dev
 
-This is a small setup for developing a CoffeeScript application with TDD using [Grunt](http://gruntjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) with the [Jasmine](http://jasmine.github.io/) testing framework.
+This is a small setup for developing a CoffeeScript application with TDD using [Grunt](http://gruntjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) with the [Jasmine](http://jasmine.github.io/) testing framework and the [Istanbul](https://github.com/yahoo/istanbul) code coverage reporter.
 
 ## Requirements
 
@@ -31,6 +31,10 @@ This will launch Firefox as test runner by default.
 Run `grunt watch` for developing your application. This will watch all files in `src/` and `test-src/` and compile them on any change to `dev/` or `test/` respectively. After that all tests are run.
 
 The files are not uglified or concatenated so you can debug your code easily.
+
+### Code coverage
+
+The code coverage reports are put in the `coverage/` directory. Simply open the `index.html` and explore the report. You can see a detailed per-file report there, too!
 
 ### Testing
 
