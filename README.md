@@ -2,6 +2,8 @@
 
 This is a small setup for developing a CoffeeScript application with TDD using [Grunt](http://gruntjs.com/) and [Karma](http://karma-runner.github.io/0.12/index.html) with the [Jasmine](http://jasmine.github.io/) testing framework.
 
+[![Build Status](https://travis-ci.org/mzur/coffee-dev.svg?branch=master)](https://travis-ci.org/mzur/coffee-dev)
+
 ## Requirements
 
 To use this setup you need to have `node` and `npm` installed. For running the test server you need [PhantomJS](http://phantomjs.org/).
