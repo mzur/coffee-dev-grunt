@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 			test: 'test-src/**/*.coffee'
 			src: 'src/**/*.coffee'
 		
-		dest: 
+		dest:
 			dist: 'dist/<%= pkg.name %>.js'
 			dev: 'dev/'
 			test: 'test/'
@@ -55,25 +55,15 @@ module.exports = (grunt) ->
 				singleRun: yes
 				browsers: ['PhantomJS']
 
-		coffee_jshint:
-			files: ['Gruntfile.coffee', '<%= path.src %>', '<%= path.test %>']
+		coffeelint:
+			app: ['Gruntfile.coffee', '<%= path.src %>', '<%= path.test %>']
 			options:
-				globals: [
-					'module'
-					'console'
-					'document'
-					'describe'
-					'it'
-					'before'
-					'beforeEach'
-					'after'
-					'afterEach'
-				]
+				configFile: 'coffeelint.json'
 
 		watch:
-			files: ['<%= coffee_jshint.files %>']
+			files: ['<%= coffeelint.app %>']
 			tasks: [
-				#'coffee_jshint'
+				'coffeelint'
 				'clean:dev'
 				'coffee:dev'
 				'clean:test'
@@ -84,13 +74,13 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks 'grunt-contrib-coffee'
 	grunt.loadNpmTasks 'grunt-contrib-clean'
 	grunt.loadNpmTasks 'grunt-contrib-uglify'
-	grunt.loadNpmTasks 'grunt-coffee-jshint'
+	grunt.loadNpmTasks 'grunt-coffeelint'
 	grunt.loadNpmTasks 'grunt-karma'
 	grunt.loadNpmTasks 'grunt-contrib-watch'
 
 	grunt.registerTask 'test', [
 		'clean'
-		#'coffee_jshint'
+		'coffeelint'
 		'coffee:dev'
 		'coffee:test'
 		'karma:continuous'
